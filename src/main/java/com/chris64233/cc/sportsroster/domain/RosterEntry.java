@@ -48,6 +48,13 @@ public class RosterEntry {
         this.registeredAt = registeredAt;
     }
 
+    /**
+     * 转会执行时把本条赛季注册迁移到另一份球队名单，球员的赛季唯一注册关系不变。
+     */
+    public void moveTo(Roster targetRoster) {
+        this.roster = targetRoster;
+    }
+
     public Long getId() {
         return id;
     }
